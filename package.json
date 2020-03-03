@@ -1,0 +1,30 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Valckyz",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "async": "^3.1.0",
+    "bot.js": "0.0.1",
+    "common-tags": "^1.8.0",
+    "dabi-images": "^2.7.5",
+    "discord.js": "^11.5.1",
+    "djs-commands": "^1.2.2",
+    "dotenv": "^8.2.0",
+    "fortnite": "^4.3.2",
+    "got": "^10.5.5",
+    "node-fetch": "^2.6.0",
+    "random-puppy": "^1.1.0",
+    "snekfetch": "^4.0.4",
+    "superagent": "^5.2.1",
+    "urban": "^0.3.2",
+    "weather-js": "^2.0.0",
+    "weather.js": "^0.1.0"
+  }
+}
