@@ -24,11 +24,11 @@ module.exports = {
   user.send(dmsEmbed);
 
   message.delete();
-  const channel = message.guild.channels.find(c => c.name === "warn-logs")
+  const channel = message.guild.channels.find(c => c.name === "logs")
             
   // No channel found
   if (!channel)
-      return message.channel.send("Couldn't find a `#warn-logs` channel").then(m => m.delete(5000));
+      return message.channel.send("Couldn't find a `#logs` channel").then(m => m.delete(5000));
 
     let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
 
