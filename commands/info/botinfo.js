@@ -19,8 +19,9 @@ module.exports = {
     .addField("Servers", `🛡 ${servsize}`, inline)
     .addField("Channels", `📁 ${chansize}`, inline)
     .addField("Users", `🙍‍♂️ ${usersize}`, inline)
-    .addField("Created On", bot.user.createdAt)
-    .setFooter(`Information about: ${bot.user.username}. Developed with ❤ by  Valckyz`)
+    .addField("Current Version", `4.0`, inline)
+    .addField("Project started on", "Sun Jan 12 2020")
+    .setFooter(`© ${bot.user.username} 2020. Developed with ❤ by  Valckyz`)
     .setTimestamp()
     
     message.channel.send(botembed);
