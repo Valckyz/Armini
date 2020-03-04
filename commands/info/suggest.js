@@ -8,8 +8,8 @@ module.exports = {
         let embed = new RichEmbed()
             .setColor("RANDOM")
             .setTitle("**Suggestion Form**")
-            .setDescription("► Have a suggestion for the server? You think something would be better with your idea? Well we take your word seriously here so please suggest here")
-            .addField("Link", "https://sites.google.com/view/armini")
+            .setDescription("► Have a suggestion for the bot? You think something would be better with your idea? Well we take your word seriously here so please suggest here")
+            .addField("Link", "https://docs.google.com/forms/d/e/1FAIpQLSfvVNMH7zzxuPOI_hSSGRdtu2H6lnx9myEbV0MiwnwwD2wR3A/viewform")
         message.channel.send(embed);
     }
 }
