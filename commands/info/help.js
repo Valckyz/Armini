@@ -28,6 +28,7 @@ module.exports = {
             .addField("botinfo", "Sends you information about Armini")
             .addField("Geton", "Sends a DM to the mentioned user to get on")
             .addField("iceage", "Sends a ice age baby picture 💙")
+            .addField("cursed", "Sends cursed pictures")
         message.channel.send(embed);
     }
 }
