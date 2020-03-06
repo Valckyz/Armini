@@ -9,8 +9,8 @@ module.exports = {
     run: (client, message, args) => {
         message.delete();
 
-        if (args.length < 0)
-            return message.reply("Nothing to say?").then(m => m.delete(5000));
+        if (args.length < 1)
+            return message.reply("Nothing to report?").then(m => m.delete(5000));
 
             const embed = new RichEmbed()
                 .setDescription(args.slice(0).join(" "))

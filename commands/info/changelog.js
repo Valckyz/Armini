@@ -12,7 +12,7 @@ module.exports = {
     .setThumbnail(bicon)
     .addField("Version:", `🤖4.2`, inline)
     .addField("Date:", "3/5/20", inline )
-    .addField("Change #1", "New \`bug\` command which lets you report bugs")
+    .addField("Change #1", "New \`/bug\` command which lets you report bugs")
     .addField("Change #2", "Made \`/suggest`\ command via Discord, Let's you suggest stuff for the bot")
     .addField("Change #3", "Fixed glitches")
     .setFooter(`© ${bot.user.username} 2020. Developed with ❤ by  Valckyz`)
