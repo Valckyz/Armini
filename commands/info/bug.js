@@ -1,8 +1,8 @@
 const { RichEmbed } = require("discord.js");
 
 module.exports = {
-    name: "suggest",
-    aliases: ["suggestion", "Suggest"],
+    name: "bug",
+    aliases : ["Bug"],
     category: "moderation",
     description: "Says your input via the bot",
     usage: "<input>",
@@ -19,7 +19,7 @@ module.exports = {
                 .setAuthor(message.author.username, message.author.displayAvatarURL);
 
         const suggest = client.guilds.get("675551961545965600")
-        const server = client.channels.get("684799021189169229")
+        const server = client.channels.get("685327744128778240")
         
                 
         server.send(embed);
