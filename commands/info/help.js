@@ -11,7 +11,7 @@ module.exports = {
             .setDescription("**PREFIX:** \`/\`")
             .addField("Meme", "Sends a meme")
             .addField("FN store", "Shows the current Fortnite shop")
-            .addField("Suggest", "Sends a link to the Armini Suggestion Form")
+            .addField("Suggest", "You can suggest stuff for the bot via this command")
             .addField("Cat", "Sends pictures of cats")
             .addField("Cars", "Sends pictures of cars")
             .addField("Insta", "You can check people's instagram accounts")
