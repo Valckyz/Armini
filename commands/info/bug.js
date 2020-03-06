@@ -23,5 +23,7 @@ module.exports = {
         
                 
         server.send(embed);
+
+        message.reply("Your bug report has been registered in our system and we'll be looked at. We thank you for cooperation").then(m => m.delete(6000));
     }
 }
