@@ -30,6 +30,7 @@ module.exports = {
             .addField("iceage", "Sends a ice age baby picture 💙")
             .addField("cursed", "Sends cursed pictures")
             .addField("bug", "Report bug reports via this command")
+            .addField("purge", "deletes a number of messages")
         message.channel.send(embed);
     }
 }
