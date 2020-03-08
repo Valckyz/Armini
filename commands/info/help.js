@@ -27,7 +27,6 @@ module.exports = {
             .addField("Warn", "Warns a user and logs it in #logs")
             .addField("botinfo", "Sends you information about Armini")
             .addField("Geton", "Sends a DM to the mentioned user to get on")
-            .addField("iceage", "Sends a ice age baby picture 💙")
             .addField("cursed", "Sends cursed pictures")
             .addField("bug", "Report bug reports via this command")
             .addField("purge", "deletes a number of messages")
