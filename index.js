@@ -25,7 +25,7 @@ client.on("ready", () => {
     client.user.setPresence({
         status: "online",
         game: {
-            name:  `${client.guilds.size} | a!help`,
+            name:  `${client.guilds.size} Servers | /help`,
             type: "WATCHING"
         }
     }); 
