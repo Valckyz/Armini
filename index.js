@@ -1,6 +1,7 @@
 const { Client, Collection } = require("discord.js");
 const { config } = require("dotenv");
 const TOKEN = process.env.TOKEN;
+let statuses = [`${client.guilds.size} | /help`, `Version 1.2 | /help`];
 
 const client = new Client({
     disableEveryone: false
@@ -22,13 +23,20 @@ config({
 client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!, No Crashes Detected`);
 
-    client.user.setPresence({
-        status: "online",
-        game: {
-            name:  `${client.guilds.size} Servers |  /help`,
-            type: "WATCHING"
-        }
-    }); 
+    setInterval(function() {
+
+
+        let status = statuses[Math.floor(Math.random()*statuses.length)];
+
+
+        client.user.setPresence({ 
+            game: {
+                name: status,
+                type: "Watching",
+            }
+        });
+
+    }, 7000)
 })
 
 client.on("message", async message => {
