@@ -30,6 +30,7 @@ module.exports = {
             .addField("cursed", "Sends cursed pictures")
             .addField("bug", "Report bug reports via this command")
             .addField("purge", "deletes a number of messages")
+            .addField("support", "If you wish to support the bot use this command")
         message.channel.send(embed);
     }
 }
