@@ -33,10 +33,12 @@ client.on("ready", () => {
             game: {
                 name: status,
                 type: "Watching",
+                url: "https://discordapp.com/"
             }
         });
 
     }, 7000)
+
 })
 
 client.on("message", async message => {
