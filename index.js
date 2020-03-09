@@ -19,17 +19,28 @@ config({
     require(`./handlers/${handler}`)(client);
 });
 
-client.on("ready", () => {
-    console.log(`Hi, ${client.user.username} is now online!, No Crashes Detected`);
+let statuses = ['8 Servers | /help', 'Version 1.2 | /help'];
 
-    client.user.setPresence({
-        status: "online",
-        game: {
-            name:  `${client.guilds.size} Servers | /help`,
-            type: "WATCHING"
-        }
-    }); 
-})
+client.on('ready', () => {
+    console.log("online")
+
+    setInterval(function() {
+
+
+        let status = statuses[Math.floor(Math.random()*statuses.length)];
+
+
+        client.user.setPresence({ 
+            game: {
+                name: status,
+                type: "Watching",
+                url: "https://discordapp.com/"
+            }
+        });
+
+    }, 7000)
+    
+});
 
 client.on("message", async message => {
     const prefix = "/";
