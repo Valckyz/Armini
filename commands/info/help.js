@@ -31,6 +31,7 @@ module.exports = {
             .addField("bug", "Report bug reports via this command")
             .addField("purge", "deletes a number of messages")
             .addField("support", "If you wish to support the bot use this command")
+            .addField("communicate", "let's you communicate with the developer via the bot")
         message.channel.send(embed);
     }
 }

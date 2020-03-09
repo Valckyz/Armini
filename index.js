@@ -19,7 +19,7 @@ config({
     require(`./handlers/${handler}`)(client);
 });
 
-let statuses = ['8 Servers | /help', 'Version 1.2 | /help'];
+let statuses = [`${client.guilds.size} Servers | /help`, 'Version 1.3 | /help'];
 
 client.on('ready', () => {
     console.log("online")
