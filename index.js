@@ -19,7 +19,8 @@ config({
     require(`./handlers/${handler}`)(client);
 });
 
-let statuses = [`${client.guilds.size} Servers | /help`, 'Version 1.3 | /help'];
+let servsize = bot.guilds.size
+let statuses = [servsize `Servers | /help`, 'Version 1.3 | /help'];
 
 client.on('ready', () => {
     console.log("online")
