@@ -32,6 +32,7 @@ module.exports = {
             .addField("purge", "deletes a number of messages")
             .addField("support", "If you wish to support the bot use this command")
             .addField("talk", "let's you communicate with the developer via the bot")
+            .addField("avatar", "Sends a link to mentioned user's avatar")
         message.channel.send(embed);
     }
 }
