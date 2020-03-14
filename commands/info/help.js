@@ -5,34 +5,16 @@ module.exports = {
     category: "info",
     description: "Helps",
     run: async (client, message, args) => {
+        let inline = true
         let embed = new RichEmbed()
             .setColor("RANDOM")
             .setTitle("**__COMMANDS__**")
             .setDescription("**PREFIX:** \`/\`")
-            .addField("Meme", "Sends a meme")
-            .addField("FN store", "Shows the current Fortnite shop")
-            .addField("Suggest", "You can suggest stuff for the bot via this command")
-            .addField("Cat", "Sends pictures of cats")
-            .addField("Cars", "Sends pictures of cars")
-            .addField("Insta", "You can check people's instagram accounts")
-            .addField("Report", "You can report people via this command")
-            .addField("FN Stats", "Shows a players stats in Fortnite")
-            .addField("Dog", "Sends pictures of dogs")
-            .addField("8ball", "Ask 8ball some questions")
-            .addField("Urban", "Search on Urban dictionary")
-            .addField("Weatherc", "you can check the weather by this command (In Celcius)")
-            .addField("Weatherf", "you can check the weather by this command (In Fahrenheit)")
-            .addField("Cheese", "Sends pictures of Cheese")
-            .addField("Joke", "Sends a dad joke. *funny*")
-            .addField("Warn", "Warns a user and logs it in #logs")
-            .addField("botinfo", "Sends you information about Armini")
-            .addField("Geton", "Sends a DM to the mentioned user to get on")
-            .addField("cursed", "Sends cursed pictures")
-            .addField("bug", "Report bug reports via this command")
-            .addField("purge", "deletes a number of messages")
-            .addField("support", "If you wish to support the bot use this command")
-            .addField("talk", "let's you communicate with the developer via the bot")
-            .addField("avatar", "Sends a link to mentioned user's avatar")
+            .addField("Fun✨", "\`meme\` \`8ball\` \`avatar\` \`fn store\` \`geton\` \`insta\` \`urban\` \`fn stats\` \`joke\`", inline) 
+            .addField("Photo📷", "\`cat\` \`cars\` \`dog\` \`cheese\` \`cursed\`", inline)
+            .addField("Moderation👮", "\`warn\` \`report\` \`purge\` \`say\`",inline)
+            .addField("Developer👨‍💻", "\`suggest\` \`botinfo\` \`bug\` \`support\` \`talk\`", inline)
+            .addField("Weather⛅", "\`weatherc\` \*<-- Celcius\* \`weatherf\` \*<-- Fahrenheit\* ")
         message.channel.send(embed);
     }
 }
