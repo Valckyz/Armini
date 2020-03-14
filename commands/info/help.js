@@ -13,7 +13,7 @@ module.exports = {
             .addField("Fun✨", "\`meme\` \`8ball\` \`avatar\` \`fn store\` \`geton\` \`insta\` \`urban\` \`fn stats\` \`joke\`", inline) 
             .addField("Photo📷", "\`cat\` \`cars\` \`dog\` \`cheese\` \`cursed\`", inline)
             .addField("Moderation👮", "\`warn\` \`report\` \`purge\` \`say\`",inline)
-            .addField("Developer👨‍💻", "\`suggest\` \`botinfo\` \`bug\` \`support\` \`talk\`", inline)
+            .addField("Developer👨‍💻", "\`suggest\` \`botinfo\` \`bug\` \`support\` \`talk\` \`changelog\`", inline)
             .addField("Weather⛅", "\`weatherc\` \*<-- Celcius\* \`weatherf\` \*<-- Fahrenheit\* ")
         message.channel.send(embed);
     }
