@@ -20,7 +20,7 @@ module.exports = {
           .setImage(mentionedUser.displayAvatarURL)
           .setColor("00ff00")
           .setTitle("Avatar")
-          .setFooter("Searched by " + message.author.tag)
+          .setFooter("Executed by " + message.author.tag)
           .setDescription(mentionedUser.displayAvatarURL)
   
           message.channel.send(embed)
