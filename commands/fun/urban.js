@@ -25,7 +25,7 @@ module.exports = {
         if (message.channel.nsfw === true) {
             message.channel.send(urbEmbed);
         } else {
-            message.channel.send("This isn't NSFW channel!"
+            message.channel.send("This isn't a NSFW channel!"
             )}
     });
 }
