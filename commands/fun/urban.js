@@ -22,8 +22,11 @@ module.exports = {
         .addField("Downvotes", json.thumbs_down, true)
         .setFooter(`Written by: ${json.author}`);
 
-
-        message.channel.send(urbEmbed)
+        if (message.channel.nsfw === true) {
+            message.channel.send(urbEmbed);
+        } else {
+            message.channel.send("This isn't NSFW channel!"
+            )}
     });
 }
 
