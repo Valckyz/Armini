@@ -9,8 +9,13 @@ module.exports = {
     run: (client, message, args) => {
         message.delete();
 
+        const Discord = require("discord.js")
+        let ambed = new Discord.RichEmbed()
+        .setDescription("❓ Nothing to say?")
+        .setFooter("Example: /talk your bot is great!")
+
         if (args.length < 1)
-            return message.reply("Nothing to say?").then(m => m.delete(5000));
+            return message.channel.send(ambed).then(m => m.delete(5000));
 
             const embed = new RichEmbed()
                 .setDescription(args.slice(0).join(" "))

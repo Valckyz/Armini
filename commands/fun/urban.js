@@ -22,10 +22,15 @@ module.exports = {
         .addField("Downvotes", json.thumbs_down, true)
         .setFooter(`Written by: ${json.author}`);
 
+        let ambed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setDescription("🔒 **This is not a NSFW Channel**")
+        .setFooter("*This command only works in NSFW Channels*")
+
         if (message.channel.nsfw === true) {
             message.channel.send(urbEmbed);
         } else {
-            message.channel.send("This isn't a NSFW channel!"
+            message.channel.send(ambed
             )}
     });
 }

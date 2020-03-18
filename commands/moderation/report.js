@@ -1,5 +1,6 @@
 const { RichEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
+const Discord = require("discord.js")
 
 module.exports = {
     name: "report",
@@ -14,22 +15,33 @@ module.exports = {
         let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         // No person found
+        let ambed3 = new Discord.RichEmbed()
+        .setDescription("❌ Couldn't find that person?")
+        .setFooter("Psst! Make sure you are mentioning someone")
         if (!rMember)
-            return message.reply("Couldn't find that person?").then(m => m.delete(5000));
+            return message.channel.send(ambed3).then(m => m.delete(5000));
 
         // The member has BAN_MEMBERS or is a bot
+        let ambed2 = new Discord.RichEmbed()
+        .setDescription("❌ Can't report that member")
+        .setFooter("They are too high in the hierarchy")
         if (rMember.hasPermission("ADMINISTRATOR"))
-            return message.channel.send("Can't report that member").then(m => m.delete(5000));
+            return message.channel.send(ambed2).then(m => m.delete(5000));
 
         // If there's no argument
+        let ambed1 = new Discord.RichEmbed()
+        .setDescription("❌ Please provide a reason for the report")
         if (!args[1])
-            return message.channel.send("Please provide a reason for the report").then(m => m.delete(5000));
+            return message.channel.send(ambed1).then(m => m.delete(5000));
         
         const channel = message.guild.channels.find(c => c.name === "reports")
             
         // No channel found
+        let ambed = new Discord.RichEmbed()
+        .setDescription("❌ Couldn't find a `#reports` channel")
+        .setFooter("psst! make a channel named reports")
         if (!channel)
-            return message.channel.send("Couldn't find a `#reports` channel").then(m => m.delete(5000));
+            return message.channel.send(ambed).then(m => m.delete(5000));
 
         const embed = new RichEmbed()
             .setColor("RANDOM")

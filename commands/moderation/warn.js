@@ -8,11 +8,18 @@ module.exports = {
     description: "Gives users warning",
     usage: "<input>",
     run: (client, message, args) => {
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You don't have premission to do that!");
+      message.delete()
+      let ambed = new Discord.RichEmbed()
+      .setDescription("❌ You do not have permissions to do that")
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(ambed).then(m => m.delete(5000));
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  if (message.mentions.users.size < 1) return message.reply('You must mention someone to warn them.');
-  if (reason.length < 1) return message.reply('You must have a reason for the warning.');
+  let ambed2 = new Discord.RichEmbed()
+  .setDescription("❌ You must mention someone to warn them.")
+  if (message.mentions.users.size < 1) return message.channel.send(ambed2).then(m => m.delete(5000));
+  let ambed3 = new Discord.RichEmbed()
+  .setDescription("❌ You must have a reason for the warning.")
+  if (reason.length < 1) return message.channel.send(ambed3).then(m => m.delete(5000));
 
   let dmsEmbed = new Discord.RichEmbed()
   .setTitle("Warning")
@@ -27,8 +34,11 @@ module.exports = {
   const channel = message.guild.channels.find(c => c.name === "logs")
             
   // No channel found
+  let ambed4 = new Discord.RichEmbed()
+  .setDescription("❌ Couldn't find a `#logs` channel")
+  .setFooter("psst! Make sure you have a channel called logs!")
   if (!channel)
-      return message.channel.send("Couldn't find a `#logs` channel").then(m => m.delete(5000));
+      return message.channel.send(ambed4).then(m => m.delete(5000));
 
     let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
 

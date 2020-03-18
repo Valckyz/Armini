@@ -1,4 +1,5 @@
 const { RichEmbed } = require("discord.js");
+const Discord = require("discord.js")
 
 module.exports = {
     name: "bug",
@@ -8,9 +9,14 @@ module.exports = {
     usage: "<input>",
     run: (client, message, args) => {
         message.delete();
+        
+        const Discord = require("discord.js")
+        let ambed = new Discord.RichEmbed()
+        .setDescription("❓ Nothing to report?")
+        .setFooter("Example: /bug cursed command broken")
 
         if (args.length < 1)
-            return message.reply("Nothing to report?").then(m => m.delete(5000));
+            return message.channel.send(ambed).then(m => m.delete(5000));
 
             const embed = new RichEmbed()
                 .setDescription(args.slice(0).join(" "))

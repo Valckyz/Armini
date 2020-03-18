@@ -1,4 +1,5 @@
 const { RichEmbed } = require("discord.js");
+const Discord = require("discord.js");
 const { stripIndents } = require("common-tags");
 
 const fetch = require("node-fetch");
@@ -10,10 +11,13 @@ module.exports = {
     description: "Find out some nice instagram statistics",
     usage: "<name>",
     run: async (client, message, args) => {
+        message.delete()
         const name = args.join(" ");
-
+        let ambed = new Discord.RichEmbed()
+        .setDescription("❓ Maybe it's useful to actually search for someone?")
+        .setFooter("Example: /insta lamborghini")
         if (!name) {
-            return message.reply("Maybe it's useful to actually search for someone...!")
+            return message.channel.send(ambed)
                 .then(m => m.delete(5000));
         }
 

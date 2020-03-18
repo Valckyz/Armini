@@ -10,7 +10,14 @@ module.exports = {
     description: "Display someone's stats, the current store, and challenges!!",
     usage: "<username | store>",
     run: async (client, message, args) => {
+        message.delete()
         const platforms = ["pc", "xb1", "psn"];
+
+        let ambed = new Discord.RichEmbed()
+        .setDescription("❌ Who's stats do you wanna check?")
+        .setFooter("Example: /fn ninja")
+        if (!args[0]) {
+            message.channel.send(ambed).then(message => message.delete(5000))
         
         if (args[0].toLowerCase() === "store") {
             const store = await ft.store();
@@ -81,4 +88,5 @@ module.exports = {
             message.channel.send(embed)
         }
     }
+}
 }

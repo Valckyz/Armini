@@ -5,8 +5,12 @@ module.exports = {
     aliases: ["Geton", "join"],
     category: "fun",
     run: async (client, message, args) => {
+        message.delete()
         let game = args.slice(1).join(' ');
-        if (game.length < 1) return message.reply('You must say what game or application you want them to get on');
+        let ambed = new Discord.RichEmbed()
+        .setDescription("❌ You must mention a user and a game you want them to get online on")
+        .setFooter("Example: /geton @valckyz Call of duty")
+        if (game.length < 1) return message.channel.send(ambed).then(message => message.delete(5000))
         let user = message.mentions.users.first();
         let dmsEmbed = new Discord.RichEmbed()
         .setTitle("GET ON!!!!!")
