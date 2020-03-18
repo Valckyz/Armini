@@ -19,7 +19,7 @@ module.exports = {
     .addField("Servers", `🛡 ${servsize}`, inline)
     .addField("Channels", `📁 ${chansize}`, inline)
     .addField("Users", `🙍‍♂️ ${usersize}`, inline)
-    .addField("Current Version", `1.4`, inline)
+    .addField("Current Version", `1.5`, inline)
     .addField("Project started on", "Sun Jan 12 2020")
     .setFooter(`© ${bot.user.username} 2020. Developed with ❤ by  Valckyz`)
     .setTimestamp()
