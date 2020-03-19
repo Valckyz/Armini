@@ -1,4 +1,5 @@
 const { RichEmbed } = require("discord.js");
+const Discord = require("discord.js");
 const randomPuppy = require("random-puppy");
 
 module.exports = {
