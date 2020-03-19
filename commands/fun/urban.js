@@ -32,13 +32,13 @@ module.exports = {
         let ambed = new Discord.RichEmbed()
         .setColor("RANDOM")
         .setDescription("🔒 **This is not a NSFW Channel**")
-        .setFooter("*This command only works in NSFW Channels*").then(m => m.delete(5000));
+        .setFooter("*This command only works in NSFW Channels*")
 
         if (message.channel.nsfw === true) {
             message.channel.send(urbEmbed);
         } else {
-            message.channel.send(ambed
-            )}
+            message.channel.send(ambed).then(m => m.delete(5000));
+        }
     });
 }
 
