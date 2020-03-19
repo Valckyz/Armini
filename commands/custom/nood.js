@@ -8,11 +8,11 @@ module.exports = {
     run: async (client, message, args) => {
         message.delete()
         var answers = [
-            "https://www.instagram.com/p/B9330PFA-2d/",
-            "https://www.instagram.com/p/B9330PFA-2d/",
             "https://www.instagram.com/p/B9qcHFIAirQ/",
-            "https://www.instagram.com/p/B91GI8yg2Qg/",
-            "https://www.instagram.com/p/B92qp7ygEO3/"
+            "https://www.instagram.com/p/B9upWFqArE7/",
+            "https://www.instagram.com/p/B9qnyozA0TS/",
+            "https://www.instagram.com/p/B9qefMhAlnL/",
+            "https://www.instagram.com/p/B9qdbCKgJfY/"
           ]
 
         var randomAnswer = answers[Math.floor(Math.random() * answers.length)];

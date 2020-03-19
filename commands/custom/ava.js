@@ -15,7 +15,8 @@ module.exports = {
             "https://www.instagram.com/p/B9kP4Osg9OT/",
             "https://www.instagram.com/p/B8XNOnnp5Hk/",
             "https://www.instagram.com/p/B9DDi0FpDRH/",
-            "https://www.instagram.com/p/B9muSUQpu8c/"
+            "https://www.instagram.com/p/B9muSUQpu8c/",
+            "https://www.instagram.com/p/B96haIVA5j8/"
           ]
 
         var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
