@@ -13,6 +13,10 @@ module.exports = {
         // Grab a random property from the array
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
+        let ambed = new Discord.RichEmbed()
+        .setDescription("🔒 This is not a NSFW channel")
+        .setFooter("psst! make sure this is a NSFW channel")
+
 
         // Get a random image from the subreddit page
         const img = await randomPuppy(random);
@@ -25,7 +29,7 @@ module.exports = {
         if (message.channel.nsfw === true) {
             message.channel.send(embed);
         } else {
-            message.channel.send("This isn't NSFW channel!"
+            message.channel.send(ambed
             )}
     }
     }
