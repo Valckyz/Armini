@@ -8,6 +8,7 @@ module.exports = {
     category: "fun",
     description: "Sends an epic cheese",
     run: async (client, message, args) => {
+        message.delete()
         // In this array, 
         // you can put the subreddits you want to grab memes from
         const subReddits = ["hotcelebs"];
@@ -30,7 +31,6 @@ module.exports = {
         if (message.channel.nsfw === true) {
             message.channel.send(embed);
         } else {
-            message.channel.send(ambed
-            )}
+            message.channel.send(ambed).then(m => m.delete(5000));
     }
-    }
+    }}
