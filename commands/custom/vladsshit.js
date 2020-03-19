@@ -15,7 +15,7 @@ module.exports = {
 
         let ambed = new Discord.RichEmbed()
         .setDescription("🔒 This is not a NSFW channel")
-        .setFooter("psst! make sure this is a NSFW channel!")
+        .setFooter("psst! make sure this is a NSFW channel")
 
 
         // Get a random image from the subreddit page
