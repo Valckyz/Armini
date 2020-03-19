@@ -6,6 +6,7 @@ module.exports = {
     category: "fun",
     description: "asks urban",
     run: async (client, message, args) => {
+        message.delete()
 
         let ambed2 = new Discord.RichEmbed()
         .setColor("RANDOM")
@@ -31,7 +32,7 @@ module.exports = {
         let ambed = new Discord.RichEmbed()
         .setColor("RANDOM")
         .setDescription("🔒 **This is not a NSFW Channel**")
-        .setFooter("*This command only works in NSFW Channels*")
+        .setFooter("*This command only works in NSFW Channels*").then(m => m.delete(5000));
 
         if (message.channel.nsfw === true) {
             message.channel.send(urbEmbed);
