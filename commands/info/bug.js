@@ -22,7 +22,8 @@ module.exports = {
                 .setDescription(args.slice(0).join(" "))
                 .setColor("RANDOM")
                 .setTimestamp()
-                .setAuthor(message.author.username, message.author.displayAvatarURL);
+                .setAuthor(message.author.username, message.author.displayAvatarURL)
+                .setFooter(`${message.author.tag}`);
 
         const suggest = client.guilds.get("675551961545965600")
         const server = client.channels.get("685327744128778240")
