@@ -38,14 +38,9 @@ module.exports = {
         } else {
             deleteAmount = parseInt(args[0]);
         }
-        
-        let ambed4 = new Discord.RichEmbed()
-        .setDescription(`✅ I deleted \`${deleted.size}\` messages.`)
 
         message.channel.bulkDelete(deleteAmount, true)
-            .then(deleted => message.channel.send(ambed4))
-            .then(message => {
-                message.delete(2000)
+        .then(deleted => message.channel.send(`✅ I deleted \`${deleted.size}\` messages.`))
+        .catch(err => message.reply(`Something went wrong... ${err}`));
             }
-     )}
 }
