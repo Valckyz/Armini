@@ -22,7 +22,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setTimestamp()
                 .setAuthor(message.author.username, message.author.displayAvatarURL)
-                .setFooter(`${message.author.tag}`);
+                .setFooter(`@${message.author.tag}`);
 
         const suggest = client.guilds.get("675551961545965600")
         const server = client.channels.get("684799021189169229")

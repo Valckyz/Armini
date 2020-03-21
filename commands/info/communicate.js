@@ -21,7 +21,7 @@ module.exports = {
                 .setDescription(args.slice(0).join(" "))
                 .setColor("RANDOM")
                 .setTimestamp()
-                .setFooter(`${message.author.tag}`)
+                .setFooter(`@${message.author.tag}`)
                 .setAuthor(message.author.username, message.author.displayAvatarURL);
 
         const suggest = client.guilds.get("675551961545965600")
