@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const randomPuppy = require("random-puppy");
 
 module.exports = {
-    name: "irl",
+    name: "secks",
     aliases: [""],
     category: "fun",
     description: "Sends an epic cheese",
@@ -11,7 +11,7 @@ module.exports = {
         message.delete()
         // In this array, 
         // you can put the subreddits you want to grab memes from
-        const subReddits = ["IRLGirls"];
+        const subReddits = ["hotcelebs"];
         // Grab a random property from the array
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
@@ -32,7 +32,5 @@ module.exports = {
             message.channel.send(embed);
         } else {
             message.channel.send(ambed).then(m => m.delete(5000));
-
-            console.log(bot.guilds.forEach())
     }
     }}

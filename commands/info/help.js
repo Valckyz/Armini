@@ -5,6 +5,8 @@ module.exports = {
     category: "info",
     description: "Helps",
     run: async (client, message, args) => {
+        message.delete()
+        
         let inline = true
         let embed = new RichEmbed()
             .setColor("RANDOM")
@@ -15,6 +17,6 @@ module.exports = {
             .addField("Moderation👮", "\`warn\` \`report\` \`purge\` \`say\`",inline)
             .addField("Developer👨‍💻", "\`suggest\` \`botinfo\` \`bug\` \`support\` \`talk\` \`changelog\`", inline)
             .addField("Weather⛅", "\`weatherc\` \*<-- Celcius\* \`weatherf\` \*<-- Fahrenheit\* ")
-        message.channel.send(embed);
+        message.author.send(embed);
     }
 }
