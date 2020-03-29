@@ -23,7 +23,7 @@ module.exports = {
                 .setDescription(args.slice(1).join(" "))
                 .setColor(roleColor)
                 .setTimestamp()
-                .setAuthor(message.author.username, message.author.displayAvatarURL);
+                //.setAuthor(message.author.username, message.author.displayAvatarURL);
 
             message.channel.send(embed);
         } else {

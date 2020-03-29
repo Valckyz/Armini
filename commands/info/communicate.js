@@ -24,8 +24,8 @@ module.exports = {
                 .setFooter(`@${message.author.tag}`)
                 .setAuthor(message.author.username, message.author.displayAvatarURL);
 
-        const suggest = client.guilds.get("675551961545965600")
-        const server = client.channels.get("686353482701209613")
+        const suggest = client.guilds.get("692597757998923827")
+        const server = client.channels.get("693306554706952222")
         
                 
         server.send(embed);

@@ -16,7 +16,7 @@ module.exports = {
     .setThumbnail(bicon)
     .addField("Bot Name", `🤖 ${bot.user.username}`, inline)
     .addField("Bot Owner", "👨‍💼 <@240285932459130881>", inline )
-    .addField("Current Version", `1.5`, inline)
+    .addField("Current Version", `1.6`, inline)
     .addField("Project started on", "Sun Jan 12 2020")
     .setFooter(`© ${bot.user.username} 2020. Developed with ❤ by  Valckyz`)
     .setTimestamp()
